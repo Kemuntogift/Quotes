@@ -35,8 +35,15 @@ export class QuoteComponent implements OnInit {
   ];
 
   toggleDetails(index: any) {
-    this.quotes[index].showDetails= !this.quotes[index].showDetails;
+    this.quotes[index].showDetails = !this.quotes[index].showDetails;
   }
+
+  deleteQuote(isExpired: any, index: number) {
+    if (isExpired) {
+      this.quotes.splice(index, 1);
+    }
+  }
+
   constructor() {}
 
   ngOnInit(): void {}

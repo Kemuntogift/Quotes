@@ -2,10 +2,10 @@
     <h1>Quotes and Puns</h1>
     <hr>
     <ul>
-        <li *ngFor='let quote of quotes'>
+        <li *ngFor='let quote of quotes;let i = index'>
             <p>{{quote.excerpt}}</p>
-            <button (click)='toggleDetails(i)'>Toggle Details</button>
-            <app-quote-details *ngIf='quote.showDetails' [quote]='quote'></app-quote-details>
+            <button (click)=' toggleDetails(i) '>See Details</button>
+            <app-quote-details *ngIf='quote.showDetails ' [quote]=' quote' (isExpired)=' deleteQuote($event,i) '></app-quote-details>
         </li>
     </ul>
 </div>
