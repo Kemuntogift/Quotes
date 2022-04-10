@@ -43,7 +43,11 @@ export class QuoteComponent implements OnInit {
       this.quotes.splice(index, 1);
     }
   }
-
+  addNewQuote(quote: Quote) {
+    let quoteLength = this.quotes.length;
+    quote.id = quoteLength + 1;
+    this.quotes.push(quote);
+  }
   constructor() {}
 
   ngOnInit(): void {}
