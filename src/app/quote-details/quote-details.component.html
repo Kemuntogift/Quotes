@@ -1,5 +1,5 @@
 <p>Author: {{quote.author}}</p>
 <p>Submitter: {{quote.submitter}}</p>
-<button id="upvote" (click)="AddUpvote()" class="bg-warning">Upvotes: {{quote.upvotes}}</button>
-<button id="downvote" (click)="AddDownvote()" class="bg-secondary">Downvotes: {{quote.downvotes}}</button>
+<button id="upvote" (click)="AddUpvote()" class="bg-warning">Upvote:{{quotevotes}}</button>
+<button id="downvote" (click)="AddDownvote()" class="bg-secondary">Downvote:{{downvotes}}</button>
 <button (click)='quoteExpired(true)'>Delete</button>

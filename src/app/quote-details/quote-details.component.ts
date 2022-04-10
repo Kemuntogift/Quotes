@@ -14,6 +14,15 @@ export class QuoteDetailsComponent implements OnInit {
   quoteExpired(expired: boolean) {
     this.isExpired.emit(expired);
   }
+
+  quotevotes: number = 0;
+  AddUpvote() {
+    this.quotevotes++;
+  }
+  downvotes:number =0
+  AddDownvote() {
+    this.downvotes++;
+  }
   constructor() {}
 
   ngOnInit(): void {}
