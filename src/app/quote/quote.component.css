@@ -7,3 +7,7 @@ button {
 .togglebutton {
     background-color: slategray;
 }
+
+.row {
+    padding-top: 30px;
+}

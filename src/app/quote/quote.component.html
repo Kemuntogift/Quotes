@@ -3,22 +3,25 @@
         <a class="navbar-brand" href="#">QuotesApp</a>
     </div>
 </nav>
-<div class="introduction">
+
+
+<div id="hero-text text-center ">
     <h5>This app enables one to create a new quote with author and submitter details</h5>
     <h5>A user can also toggle to see quote details and delete a quote if they do not like it.</h5>
-</div>
-<div class="row">
-    <div class="col-md-6">
 
-        <ul>
-            <li *ngFor='let quote of quotes;let i = index'>
-                <p>{{quote.excerpt}}</p>
-                <button (click)=' toggleDetails(i) ' class="togglebutton">See Details</button>
-                <app-quote-details *ngIf='quote.showDetails ' [quote]=' quote' (isExpired)=' deleteQuote($event,i) '></app-quote-details>
-            </li>
-        </ul>
-    </div>
-    <div class="col-md-6">
-        <app-quote-form (addQuote)="addNewQuote($event)"></app-quote-form>
+    <div class=" row ">
+        <div class="col-md-6 ">
+
+            <ul>
+                <li *ngFor='let quote of quotes;let i = index'>
+                    <p>{{quote.excerpt}}</p>
+                    <button (click)=' toggleDetails(i) ' class="togglebutton ">See Details</button>
+                    <app-quote-details *ngIf='quote.showDetails ' [quote]=' quote' (isExpired)=' deleteQuote($event,i) '></app-quote-details>
+                </li>
+            </ul>
+        </div>
+        <div class="col-md-6 ">
+            <app-quote-form (addQuote)="addNewQuote($event) "></app-quote-form>
+        </div>
     </div>
 </div>
