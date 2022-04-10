@@ -48,6 +48,8 @@ export class QuoteComponent implements OnInit {
     quote.id = quoteLength + 1;
     this.quotes.push(quote);
   }
+
+  
   constructor() {}
 
   ngOnInit(): void {}
