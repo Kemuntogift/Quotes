@@ -2,4 +2,4 @@
 <p>Submitter: {{quote.submitter}}</p>
 <button id="upvote" (click)="AddUpvote()" class="bg-warning">Upvote:{{quotevotes}}</button>
 <button id="downvote" (click)="AddDownvote()" class="bg-secondary">Downvote:{{downvotes}}</button>
-<button (click)='quoteExpired(true)'>Delete</button>
+<button id="delete" (click)='quoteExpired(true)' class="bg-danger">Delete</button>
