@@ -1,6 +1,11 @@
 export class Quote {
-  id!: number;
-  excerpt!: string;
-  author!: string;
-  submitter!: string;
+  showDetails: boolean;
+  constructor(
+    public id: number,
+    public excerpt: string,
+    public author: string,
+    public submitter: string,
+  ) {
+    this.showDetails = false;
+  }
 }
