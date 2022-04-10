@@ -6,18 +6,28 @@
 
             <label for="excerpt">Excerpt</label>
             <textarea class="form-control" id="excerpt" rows="4" [(ngModel)]="newQuote.excerpt" name="excerpt" #excerpt='ngModel' required></textarea>
-            <!--Display-->{{newQuote.excerpt}} </div>
+            <!--Display-->{{newQuote.excerpt}}
+            <div [hidden]="excerpt.valid || excerpt.pristine" class="alert alert-danger">
+                <p>Excerpt is required</p>
+            </div>
+        </div>
         <div class="form-group">
 
             <label for="author">Author</label>
-            <input type="text" required class="form-control" id="author" [(ngModel)]="newQuote.author" name="author" #author='ngModel'>
+            <input type="text" required class="form-control" id="author" [(ngModel)]="newQuote.author" name="author" #author='ngModel' required>
             <!--Display-->{{newQuote.author}}
+            <div [hidden]="author.valid || author.pristine" class="alert alert-danger">
+                <p>Author is required</p>
+            </div>
         </div>
         <div class="form-group">
 
             <label for="submitter">Submitter</label>
             <input type="text" required class="form-control" id="submitter" [(ngModel)]="newQuote.submitter" name="submitter" #submitter='ngModel'>
             <!--Display-->{{newQuote.submitter}}
+            <div [hidden]="submitter.valid || submitter.pristine" class="alert alert-danger">
+                <p>Submitter is required</p>
+            </div>
         </div>
 
         <button type="submit" class="btn btn-success">Add Quote</button>
