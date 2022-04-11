@@ -1,6 +1,8 @@
 <p>Author: {{quote.author}}</p>
 <p>Submitter: {{quote.submitter}}</p>
 <p>Created on: {{quote.createdDate|date}}</p>
+
+<p>This quote was created {{quote.createdDate|passDays}} days ago.</p>
 <button id="upvote" (click)="AddUpvote()" class="bg-warning">Upvote:{{quotevotes}}</button>
 <button id="downvote" (click)="AddDownvote()" class="bg-secondary">Downvote:{{downvotes}}</button>
 <button id="delete" (click)='quoteExpired(true)' class="bg-danger">Delete</button>
