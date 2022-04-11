@@ -12,25 +12,29 @@ export class QuoteComponent implements OnInit {
       1,
       'Whoever said money cannot buy happiness simply did not know where to shop',
       'Bo Derek',
-      'Gift Kemunto'
+      'Gift Kemunto',
+      new Date(2019, 3, 14)
     ),
     new Quote(
       2,
       'If you were born with the weakness to fall you were born with the strength to rise.',
       'Rupi Kaur',
-      'Jane Doe'
+      'Jane Doe',
+      new Date(2022, 3, 21)
     ),
     new Quote(
       3,
       'Do not forget to drink water and get sun. You are  basically a houseplant with complicated emotions.',
       'Anonymous',
-      'John Doe'
+      'John Doe',
+      new Date(2016, 1, 16)
     ),
     new Quote(
       4,
       'The best ideas come as jokes so make your thinking as funny as possible',
       'David Oglivy',
-      'Miss Jagger'
+      'Miss Jagger',
+      new Date(2022, 4, 11)
     ),
   ];
 
@@ -49,7 +53,6 @@ export class QuoteComponent implements OnInit {
     this.quotes.push(quote);
   }
 
-  
   constructor() {}
 
   ngOnInit(): void {}
