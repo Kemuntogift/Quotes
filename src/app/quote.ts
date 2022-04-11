@@ -7,7 +7,7 @@ export class Quote {
     public excerpt: string,
     public author: string,
     public submitter: string,
-    public completeDate: Date
+    public createdDate: Date
   ) {
     this.showDetails = false;
   }
