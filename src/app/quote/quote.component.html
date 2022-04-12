@@ -14,9 +14,11 @@
 
             <ul>
                 <li *ngFor='let quote of quotes;let i = index'>
-                    <p>{{quote.excerpt}}</p>
-                    <button (click)=' toggleDetails(i) ' class="togglebutton ">Details</button>
-                    <app-quote-details *ngIf='quote.showDetails ' [quote]=' quote' (isExpired)=' deleteQuote($event,i) '></app-quote-details>
+                    <div>
+                        <p>{{quote.excerpt}}</p>
+                        <button (click)=' toggleDetails(i) ' class=" togglebutton ">Details</button>
+                        <app-quote-details *ngIf='quote.showDetails ' [quote]=' quote' (isExpired)=' deleteQuote($event,i) '></app-quote-details>
+                    </div>
                 </li>
             </ul>
         </div>

@@ -37,6 +37,8 @@ export class QuoteComponent implements OnInit {
       new Date(2022, 4, 11)
     ),
   ];
+  lastcount: any;
+  currentcount: any;
 
   toggleDetails(index: any) {
     this.quotes[index].showDetails = !this.quotes[index].showDetails;
@@ -52,7 +54,24 @@ export class QuoteComponent implements OnInit {
     quote.id = quoteLength + 1;
     this.quotes.push(quote);
   }
+  quotevotes: number = 0;
+  AddUpvote() {
+    this.quotevotes++;
+  }
+  downvotes: number = 0;
+  AddDownvote() {
+    this.downvotes++;
+  }
+  highestUpvote() {
+    for (let counter: number = 0; counter < this.quotes.length; counter++) {
+      this.lastcount = this.quotes[counter].upvotes;
 
+      if (this.lastcount > this.currentcount) {
+        this.currentcount = this.lastcount;
+      }
+    }
+    return this.currentcount;
+  }
   constructor() {}
 
   ngOnInit(): void {}
